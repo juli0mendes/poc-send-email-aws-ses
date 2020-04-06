@@ -11,14 +11,13 @@ import br.com.juli0mendes.pocsendemail.core.EmailCore;
 
 @SpringBootApplication
 public class App implements CommandLineRunner {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(App.class);
-	
+
 	private final EmailCore core;
-	
+
 	@Autowired
 	public App(EmailCore core) {
-		super();
 		this.core = core;
 	}
 
@@ -28,16 +27,16 @@ public class App implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+
 		log.info("sending email");
-		
+
 		try {
 			this.core.sendEmail();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		log.info("sent");		
+
+		log.info("sent");
 	}
 
 }
