@@ -1,0 +1,1 @@
+# poc-send-email-aws-ses
