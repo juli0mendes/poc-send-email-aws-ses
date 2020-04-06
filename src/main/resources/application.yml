@@ -1,0 +1,30 @@
+server:
+  port: ${port:8094}
+  
+logging:
+  file: /app-logs/poc-send-email-aws-ses/poc-send-email-aws-ses.log
+  
+spring:
+  application:
+    name: poc-send-email-aws-ses
+  profiles:
+    actives: local
+  properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          port: 587
+          starttls:
+            enable: true
+          auth: true
+
+osklen:
+  email:
+    from: ${email_from}
+    fromname: Test Send with AWS SES
+    to: ${email_to}
+    subject: Test Subject
+    host: email-smtp.us-west-2.amazonaws.com
+    smtpusername: ${email_smtp_username_aws_ses}
+    smtpassword: ${email_smtp_password_aws_ses}

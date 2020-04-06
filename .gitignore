@@ -1,3 +1,12 @@
+HELP.md
+/target/
+.classpath
+.project
+.mvn/
+.settings/
+.idea/
+adapter-pluggto-ms.iml
+
 # Compiled class file
 *.class
 
